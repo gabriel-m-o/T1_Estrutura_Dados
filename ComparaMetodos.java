@@ -5,7 +5,7 @@ public class ComparaMetodos {
         Scanner scanner = new Scanner(System.in);
         MeuVetor v;
         long ini, fim;
-        System.out.print("escolha o tamanho do vetor, 0 encerra: ");
+        System.out.print("escolha o tamanho do vetor: ");
         int tamanho = scanner.nextInt();
 
         v = new MeuVetor(tamanho);
@@ -20,11 +20,8 @@ public class ComparaMetodos {
         v.insertionSort(tamanho);
         fim = new Date().getTime();
         System.out.println("insertion demorou " + (fim-ini) + " ms");
-        System.out.println("escolha o tamanho do vetor, 0 encerra: ");
+        System.out.println("escolha o tamanho do vetor: ");
         tamanho = scanner.nextInt(); 
-
-
-
         scanner.close();
     }
 }

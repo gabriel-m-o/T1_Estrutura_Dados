@@ -190,36 +190,16 @@ public class MeuVetor {
             v[j+1] = aux;
         }
     }
-    public static void main(String[] args) {
-        int[] vetor = new int[10];
-        
-        //preenche o vetor com números aleatórios
-        for(int i=0; i < vetor.length; i++){
-            vetor[i] = (int) (Math.random() * vetor.length);
+    void selectionsort (int n, int v[]){
+        for (int i = 0; i < n-1; ++i) {
+            int min = i;
+            for (int j = i+1; j < n; ++j)
+                if (v[j] < v[min])  min = j;
+            int x = v[i]; v[i] = v[min]; v[min] = x;
         }
-        
-        System.out.println("Desordenado");
-        for(int i=0; i < vetor.length; i++){
-            System.out.print(vetor[i]);
         }
-        
-        int aux, j;
-        for(int i=1; i < vetor.length; i++){
-            aux = vetor[i];
-            j = i-1; 
-            while(j >= 0 && vetor[j] > aux){
-                vetor[j+1] = vetor[j];
-                j--;
-            }
-            vetor[j+1] = aux;
-        }
-                
-        System.out.println("\n\nOrdenado");
-        for(int i=0; i < vetor.length; i++){
-            System.out.print(vetor[i]);
-        }
-    }
 }
+
 
 
 
