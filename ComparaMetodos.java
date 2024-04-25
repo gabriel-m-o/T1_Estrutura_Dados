@@ -15,6 +15,8 @@ public class ComparaMetodos {
         fim = new Date().getTime();
         System.out.println("bubble demorou " + (fim-ini)*1000 + " ms");
 
+
+        v.resetVetor();
         v.preencheVetor(tamanho);
         ini = new Date().getTime();
         v.insertionSort(tamanho);
@@ -22,6 +24,18 @@ public class ComparaMetodos {
         System.out.println("insertion demorou " + (fim-ini) + " ms");
         System.out.println("escolha o tamanho do vetor: ");
         tamanho = scanner.nextInt(); 
+
+
+        v.resetVetor();
+        v.preencheVetor(tamanho);
+        ini = new Date().getTime();
+        v.selectionsort(tamanho);
+        fim = new Date().getTime();
+        System.out.println("selection demorou " + (fim-ini) + " ms");
+        System.out.println("escolha o tamanho do vetor: ");
+        tamanho = scanner.nextInt(); 
+        scanner.close();
+
         scanner.close();
     }
 }
